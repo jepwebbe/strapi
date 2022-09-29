@@ -27,11 +27,10 @@ export const About = () => {
 
     return (
         <>
-            {console.log(data)}
             {data && Object.values(data).map(about => {
                 return (
                     <>
-                        <section><h3>About us</h3>{about.About}</section>
+                        <section key={about.id}>{about.About}</section>
                     </>
                 )
             })}
